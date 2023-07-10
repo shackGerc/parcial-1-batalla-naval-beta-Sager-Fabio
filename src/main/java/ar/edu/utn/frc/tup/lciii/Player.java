@@ -21,7 +21,6 @@ public class Player {
      * Accumulated games won
      */
     private Integer gamesWon;
-    // TODO: more attributes if necessary
 
     public String getPlayerName() {
         return playerName;
@@ -47,13 +46,9 @@ public class Player {
         this.gamesWon = gamesWon;
     }
 
-
-    // TODO: getters & setters...
-
-    // TODO: constructors if necessary...
-
-
     public Player() {
+        this.score = 0;
+        this.gamesWon = 0;
     }
 
     public Player(String playerName, Integer score, Integer gamesWon) {

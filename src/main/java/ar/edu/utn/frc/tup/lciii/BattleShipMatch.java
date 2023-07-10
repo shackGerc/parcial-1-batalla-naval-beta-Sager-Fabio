@@ -112,13 +112,6 @@ public class BattleShipMatch {
      * @return true si input contiene y o Y, false si input contiene n o N, null para lo demas.
      */
     private static Boolean getYesNoAnswer(String input) {
-        // TODO: Crear el objeto Pattern a partir de la expresion regular provista
-        // TODO: Validar si input hace match con la expresion regular
-        // TODO: Si la respuesta hace match, validar si fue yes (y o Y) o no (n o N)
-        // TODO: Retornar true si fue yesy, o false si fue no.
-        // TODO: Si la respuesta NO hace match, mostrar un mensaje de error al usuario y retornar null
-
-        // TODO: Remember to replace the return statement with the correct object
         Pattern pattern = Pattern.compile(YES_NO_REGEX);
         if(pattern.matcher(input).matches()){
             if(input.equalsIgnoreCase("y"))

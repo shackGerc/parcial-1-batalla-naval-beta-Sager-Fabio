@@ -30,8 +30,8 @@ public class App
             // Bucle del juego
             do {
                 battleShipGame.getPlayerShot();
-                battleShipGame.drawPlayerBoards();
                 battleShipGame.generateAppShot();
+                battleShipGame.drawPlayerBoards();
                 battleShipGame.printGameStatus();
                 keepPlaying = battleShipMatch.continuePlaying();
             } while (!battleShipGame.isFinish() && keepPlaying);

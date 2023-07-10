@@ -31,6 +31,11 @@ public class Board {
     private static final String SHIP = "\u001B[32mS";
 
     /**
+     * Letter to represent the sinked ship object in the board
+     */
+    private static final String SINKEDSHIP = "\u001B[31mS";
+
+    /**
      * Letter to represent a hide cell in the board
      */
     private static final String HIDE = "_";
@@ -39,7 +44,6 @@ public class Board {
      * Board to draw in the screen
      */
     private String[][] board;
-    // TODO: more attributes if necessary
 
     public String[][] getBoard() {
         return board;
@@ -49,7 +53,6 @@ public class Board {
         this.board = board;
     }
 
-    // TODO: constructors if necessary...
     public Board() {
         this.board = new String[ROWS][COLUMNS];
     }
@@ -102,7 +105,6 @@ public class Board {
      * @see #WATER
      */
     public void setWaterOnBoard(Position position) {
-        // TODO: Setear en el board el valor de WATER en la posicion indicada por parametro
         this.board[position.getRow()][position.getColumn()] = WATER;
     }
 
@@ -117,6 +119,11 @@ public class Board {
         this.board[position.getRow()][position.getColumn()] = SHIP;
     }
 
+    public void setSinkedShipOnBoard(Position position){
+        this.board[position.getRow()][position.getColumn()] = SINKEDSHIP;
+    }
+
+
     /**
      * Este metodo inicia el tablero para la flota del jugador
      * con agua en todas sus celdas.
@@ -126,7 +133,6 @@ public class Board {
      * @see #WATER
      */
     public void initBoardFleet() {
-        // TODO: Iniciar todo el board con el valor de WATER
         for(int f = 0; f < ROWS; f++) {
             for(int c = 0; c < COLUMNS; c++) {
                 this.board[f][c] = WATER;

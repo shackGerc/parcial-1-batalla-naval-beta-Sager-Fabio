@@ -67,8 +67,6 @@ public class Ship {
     @Override
     public boolean equals(Object obj) {
         Ship ship = (Ship) obj;
-        // TODO: Retornar la validacion de la comparacion de position
-        // TODO: Remember to replace the return statement with the correct object
         return this.position.equals(ship.position);
     }
 }

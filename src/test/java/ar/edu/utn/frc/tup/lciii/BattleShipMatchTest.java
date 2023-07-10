@@ -12,10 +12,12 @@ class BattleShipMatchTest {
 
     @Test
     void testGetYesNoAnswer() {
-        // TODO: Probar este metodo privado
         BattleShipMatch bsm = new BattleShipMatch();
-        Optional<Method> metodo = ReflectionSupport.findMethod(BattleShipMatch.class, "getYesNoAnswer");
-        boolean resultado = (boolean) ReflectionSupport.invokeMethod(metodo.get(), bsm, "n");
+        Optional<Method> metodo = ReflectionSupport.findMethod(BattleShipMatch.class, "getYesNoAnswer",
+                String.class);
+        boolean resultado = false;
+        if(metodo.isPresent())
+            resultado = (boolean) ReflectionSupport.invokeMethod(metodo.get(), bsm, "y");
         assertTrue(resultado);
     }
 }

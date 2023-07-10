@@ -8,9 +8,8 @@ class PositionTest {
 
     @Test
     void testEquals() {
-        // TODO: Probar este metodo publico
-        Object s = new Ship().setPosition(new Position(0, 1));
-        boolean resultado = s.equals(new Ship().setPosition(new Position(0 ,1)));
+        Ship s = new Ship(new Position(0, 1), ShipStatus.AFLOAT);
+        boolean resultado = s.equals(new Ship(new Position(0 ,1), ShipStatus.AFLOAT));
         assertTrue(resultado);
     }
 }

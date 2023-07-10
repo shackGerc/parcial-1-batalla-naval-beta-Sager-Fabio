@@ -151,30 +151,27 @@ public class BattleShipGame {
      *
      */
     public void getPlayerFleetPositions() {
-        // TODO: Hacer un bucle para pedir las posiciones hasta alcanzar el limite
-        // TODO: Mostrar un mensaje por pantalla pidiendo posicionar el barco.
-        // TODO: Usar el metodo this.getPosition() para pedir la posicion.
-        // TODO: Validar si la posicion esta disponible en la lista de barcos.
-        // TODO: Mostrar un mensaje de error comentando que ya establesio esa posicion.
-        // TODO: Si esta disponible, crear el barco y agregarlo a la lista de barcos.
-        // TODO: Al finalizar el bucle, setear en el board las posiciones de los barcos.
+        // Hacer un bucle para pedir las posiciones hasta alcanzar el limite
+        // Mostrar un mensaje por pantalla pidiendo posicionar el barco.
+        // Usar el metodo this.getPosition() para pedir la posicion.
+        // Validar si la posicion esta disponible en la lista de barcos.
+        // Mostrar un mensaje de error comentando que ya establesio esa posicion.
+        // Si esta disponible, crear el barco y agregarlo a la lista de barcos.
+        // Al finalizar el bucle, setear en el board las posiciones de los barcos.
         Position position;
         boolean avaiblePosition;
-        for (int i = 0; i < 20; i++) {
-            System.out.println(i);
+        for (int i = 0; i < FLEET_SIZE; i++) {
             do {
                 position = this.getPosition();
-                 avaiblePosition = isAvailablePosition(this.playerShips, position);
+                avaiblePosition = isAvailablePosition(this.playerShips, position);
                 if (avaiblePosition)
                     this.playerShips.add(new Ship(position, ShipStatus.AFLOAT));
                 else
                     System.out.println("Error, esa posición no esta disponible");
-            }while (!avaiblePosition);
+            } while (!avaiblePosition);
         }
 
-        for (Ship s: playerShips) {
-            playerFleetBoard.setShipOnBoard(s.getPosition());
-        }
+        playerFleetBoard.setShipPositions(playerShips);
     }
 
     /**
@@ -198,17 +195,25 @@ public class BattleShipGame {
         Boolean avaible;
         do {
             System.out.println("Donde quiere disparar?");
-            avaible = isAvailableShot(playerShots, position);
             position = this.getPosition();
+            avaible = isAvailableShot(playerShots, position);
             if(avaible) {
                 this.playerShots.add(position);
+                int enemyShipIndex = appShips.indexOf(new Ship(position, ShipStatus.AFLOAT));
+                if(enemyShipIndex == -1)
+                    playerEnemyFleetBoard.setWaterOnBoard(position);
+                else{
+                    appShips.get(enemyShipIndex).sinkShip();
+                    playerEnemyFleetBoard.setShipOnBoard(position);
+                }
+
             } else {
-                System.out.println("Ya disparó a esa posición.!" +
+                System.out.println("Ya disparó a esa posición!" +
                         System.lineSeparator() + "Elija otra posicion...");
             }
         } while (!avaible);
-        // TODO: Preguntar si la posicion del disparo impacto un barco enemigo.
-        // TODO: Setear segun hubo un impacto o no, agua o un barco, en el tablero de marcacion de la flota enemiga
+        //  Preguntar si la posicion del disparo impacto un barco enemigo.
+        //  Setear segun hubo un impacto o no, agua o un barco, en el tablero de marcacion de la flota enemiga
     }
 
     /**
@@ -238,8 +243,8 @@ public class BattleShipGame {
         // TODO: Cuando el disparo no haya sido usado antes, agregarlo a la lista de disparos de la app
         do{
             randomShot = getRandomPosition();
-        if(isAvailableShot(this.appShots, randomShot))
-            existeEseDisparo = false;
+            if(isAvailableShot(this.appShots, randomShot))
+                existeEseDisparo = false;
 
         } while(existeEseDisparo);
 
@@ -269,7 +274,7 @@ public class BattleShipGame {
         int sinkedAppShips = 0;
         int aFloatAppShips;
 
-        for (int i = 0; i < playerShips.size(); i++) {
+        for (int i = 0; i < FLEET_SIZE; i++) {
             if(playerShips.get(i).getShipStatus() == ShipStatus.SUNKEN)
                 sinkedPlayerShips++;
             if(appShips.get(i).getShipStatus() == ShipStatus.SUNKEN)
@@ -280,12 +285,10 @@ public class BattleShipGame {
         if(!isFinish()){
             System.out.println("Todavía no hay ganador");
         }
-        System.out.println("---"+player.getPlayerName() + "---");
-        System.out.println("Barcos: " + playerShips.size());
+        System.out.println("---"+ player.getPlayerName() + "---");
         System.out.println("Barcos hundidos: " + sinkedPlayerShips);
         System.out.println("Barcos a flote: " + aFloatPlayerShips);
         System.out.println("---"+ "Computadora" + "---");
-        System.out.println("Barcos: " + appShips.size());
         System.out.println("Barcos hundidos: " + sinkedAppShips);
         System.out.println("Barcos a flote: " + aFloatAppShips);
     }
@@ -314,8 +317,10 @@ public class BattleShipGame {
      */
     public void goodbyeMessage() {
         // TODO: Imprimir por pantalla un mensaje de despedida
+        System.out.println("Juego finalizado...");
         System.out.println("Ganador: " + winner.getPlayerName());
-
+        System.out.println("Puntaje partidas ganadas: " + winner.getGamesWon());
+        System.out.println("Puntaje acumulado entre partidas: " + winner.getScore());
     }
 
     /**

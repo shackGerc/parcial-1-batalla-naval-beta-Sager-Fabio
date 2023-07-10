@@ -103,6 +103,7 @@ public class Board {
      */
     public void setWaterOnBoard(Position position) {
         // TODO: Setear en el board el valor de WATER en la posicion indicada por parametro
+        this.board[position.getRow()][position.getColumn()] = WATER;
     }
 
     /**

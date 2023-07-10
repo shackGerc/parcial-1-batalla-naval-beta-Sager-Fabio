@@ -6,7 +6,6 @@ package ar.edu.utn.frc.tup.lciii;
  * La clase posee las coordenadas en forma de row y column,
  * que son una posicion en la matriz de Boar
  *
- * @see Board#board
  */
 public class Position {
 

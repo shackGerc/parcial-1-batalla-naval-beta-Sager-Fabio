@@ -5,22 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8663ef09-956b-48a8-a96a-2b0be26811c1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/parcial-1-batalla-naval-beta-Sager-Fabio.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/frc/tup/lciii/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/frc/tup/lciii/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/frc/tup/lciii/BattleShipGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/frc/tup/lciii/BattleShipGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/frc/tup/lciii/BattleShipMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/frc/tup/lciii/BattleShipMatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/frc/tup/lciii/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/frc/tup/lciii/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/frc/tup/lciii/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/frc/tup/lciii/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/frc/tup/lciii/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/frc/tup/lciii/Ship.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ar/edu/utn/frc/tup/lciii/BattleShipMatchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ar/edu/utn/frc/tup/lciii/BattleShipMatchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ar/edu/utn/frc/tup/lciii/PositionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ar/edu/utn/frc/tup/lciii/PositionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ar/edu/utn/frc/tup/lciii/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ar/edu/utn/frc/tup/lciii/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ar/edu/utn/frc/tup/lciii/BattleShipGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ar/edu/utn/frc/tup/lciii/BattleShipGame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ar/edu/utn/frc/tup/lciii/BattleShipMatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ar/edu/utn/frc/tup/lciii/BattleShipMatch.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ar/edu/utn/frc/tup/lciii/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ar/edu/utn/frc/tup/lciii/Board.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ar/edu/utn/frc/tup/lciii/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ar/edu/utn/frc/tup/lciii/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ar/edu/utn/frc/tup/lciii/Position.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ar/edu/utn/frc/tup/lciii/Position.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ar/edu/utn/frc/tup/lciii/Ship.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ar/edu/utn/frc/tup/lciii/Ship.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ar/edu/utn/frc/tup/lciii/ShipStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ar/edu/utn/frc/tup/lciii/ShipStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ar/edu/utn/frc/tup/lciii/BattleShipMatchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ar/edu/utn/frc/tup/lciii/BattleShipMatchTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ar/edu/utn/frc/tup/lciii/PositionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ar/edu/utn/frc/tup/lciii/PositionTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,13 +31,6 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="2QRiY1kJJjkW12EmnDP7LyLR9DG" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -48,9 +39,10 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/shackgerc/Repositorios/LC_III/parcial-1-batalla-naval-beta-113943-Sager-Fabio&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/shackgerc/Repositorios/shackgerc/LC_III/parcial-1-batalla-naval-beta-Sager-Fabio&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -128,6 +120,8 @@
       <workItem from="1689012369225" duration="663000" />
       <workItem from="1689026929986" duration="5882000" />
       <workItem from="1689032974553" duration="25000" />
+      <workItem from="1689798407033" duration="1460000" />
+      <workItem from="1696628256867" duration="2967000" />
     </task>
     <servers />
   </component>
